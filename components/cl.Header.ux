@@ -1,0 +1,13 @@
+<StackPanel 
+  ux:Class="cl.Header"
+  Color="{Resource Colors.purpleDark}" 
+  Height="{Resource Measures.headerHeight}"
+  Orientation="Horizontal"
+  Padding="{Resource Measures.pagePadding},0">
+  <string ux:Property="Title" />
+
+  <Text 
+    Alignment="Center"
+    Color="{Resource Colors.text}"
+    Value="{ReadProperty Title}" />
+</StackPanel>

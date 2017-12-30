@@ -1,0 +1,18 @@
+<Page ux:Class="ContactsListPage">
+  <Router ux:Dependency="router" />
+  <JavaScript File="ContactsListPage.js" />
+
+  <DockPanel>
+    <cl.Header Dock="Top" Title="Contacts" />
+    <ScrollView>
+      <StackPanel Padding="{Resource Measures.pagePadding}">
+        <Each Items="{contacts}">
+          <cl.ContactListItem 
+            Avatar="{avatar}"
+            Subtitle="{title}"
+            Title="{name}" />
+        </Each>
+      </StackPanel>
+    </ScrollView>
+  </DockPanel>
+</Page>

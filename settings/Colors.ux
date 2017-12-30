@@ -1,0 +1,9 @@
+<Panel ux:Class="Colors">
+  <float4 ux:Global="Colors.purple" ux:Value="#312447" />
+  <float4 ux:Global="Colors.purpleDark" ux:Value="#272132" />
+  <float4 ux:Global="Colors.purpleDarker" ux:Value="#1E162D" />
+  <float4 ux:Global="Colors.purpleLight" ux:Value="#5B4A78" />
+  <float4 ux:Global="Colors.purpleLighter" ux:Value="#D2BBFA" />
+  <float4 ux:Global="Colors.text" ux:Value="#ffffff" />
+  <float4 ux:Global="Colors.textLight" ux:Value="#655A75" />
+</Panel>

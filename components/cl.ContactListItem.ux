@@ -1,0 +1,36 @@
+<Panel 
+  ux:Class="cl.ContactListItem"
+  Height="{Resource Measures.itemHeight}">
+  <string ux:Property="Avatar" />
+  <string ux:Property="Subtitle" />
+  <string ux:Property="Title" />
+
+  <Circle
+    Alignment="Left"
+    Height="80"
+    Width="80">
+    <ImageFill Url="{ReadProperty Avatar}" />
+    <Stroke Color="{Resource Colors.purpleLight}" Offset="2" Width="2" />
+  </Circle>
+
+  <Panel 
+    Height="{{Resource Measures.itemHeight} - 20}"
+    Margin="40,10,10,10">
+    <StackPanel 
+      Alignment="VerticalCenter"
+      Padding="60,20,20,20">
+      <Text 
+        Color="{Resource Colors.text}"
+        FontSize="{Resource Measures.titleSize}"
+        Value="{ReadProperty Title}" />
+      <Text 
+        Color="{Resource Colors.textLight}"
+        TextWrapping="Wrap"
+        Value="{ReadProperty Subtitle}"/>
+    </StackPanel>
+    <Rectangle 
+      Color="{Resource Colors.purple}"
+      CornerRadius="20"
+      Layer="Background"/>
+  </Panel>  
+</Panel>
