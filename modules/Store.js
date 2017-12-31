@@ -4,7 +4,6 @@ const contacts = Observable()
 
 Backend.getContacts()
   .then(function (results) {
-    // console.log('Results: ---')
     contacts.replaceAll(results)
   })
   .catch(function (error) {

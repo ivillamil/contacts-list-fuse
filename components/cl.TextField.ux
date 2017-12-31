@@ -1,0 +1,15 @@
+<StackPanel 
+  ux:Class="cl.TextField"
+  Padding="{Resource Measures.pagePadding}, 0, {Resource Measures.pagePadding}, 8">
+  <string ux:Property="Label" />
+  <string ux:Property="Text" />
+
+  <Text 
+    Color="{Resource Colors.text}"
+    FontSize="{Resource Measures.smallTextSize}"
+    Value="{ReadProperty Label}" />
+  <Text 
+    Color="{Resource Colors.textLight}"
+    FontSize="{Resource Measures.smallTextSize}"
+    Value="{ReadProperty Text}" />
+</StackPanel>

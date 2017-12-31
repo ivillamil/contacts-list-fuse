@@ -1,0 +1,43 @@
+<Page ux:Class="ContactDetailsPage">
+  <Router ux:Dependency="router" />
+  <JavaScript File="ContactDetailsPage.js" />
+  <DockPanel>
+    <cl.Header Dock="Top" Title="" />
+    <ScrollView>
+      <StackPanel>
+        <Circle Height="120" Width="120">
+          <ImageFill Url="{contact.avatar}" />
+          <Stroke Color="{Resource Colors.purpleLight}" Width="4" />
+        </Circle>
+        <Text 
+          Alignment="Center"
+          Color="{Resource Colors.text}"
+          FontSize="{Resource Measures.largeTitleSize}"
+          Margin="0,10,0,4"
+          Value="{contact.name}" />
+        <Text 
+          Alignment="Center"
+          Color="{Resource Colors.textLight}"
+          FontSize="{Resource Measures.smallTextSize}"
+          Value="{contact.title}"/>
+        <Panel
+          Margin="{Resource Measures.pagePadding}, 20"
+          Padding="{Resource Measures.pagePadding}">
+          <Text 
+            Color="{Resource Colors.text}"
+            FontSize="{Resource Measures.smallTextSize}"
+            TextWrapping="Wrap"
+            Value="{contact.description}" />
+          <Rectangle 
+            Color="{Resource Colors.purple}" 
+            CornerRadius="{Resource Measures.pagePadding}"
+            Layer="Background"/>
+        </Panel>
+
+        <cl.TextField Label="Phone:" Text="{contact.phone}" />
+        <cl.TextField Label="Email:" Text="{contact.email}" />
+        <cl.TextField Label="Address:" Text="{contact.address}" />
+      </StackPanel>
+    </ScrollView>
+  </DockPanel>
+</Page>

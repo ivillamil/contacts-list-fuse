@@ -5,10 +5,11 @@
   <DockPanel>
     <cl.Header Dock="Top" Title="Contacts" />
     <ScrollView>
-      <StackPanel Padding="{Resource Measures.pagePadding}">
+      <StackPanel>
         <Each Items="{contacts}">
           <cl.ContactListItem 
             Avatar="{avatar}"
+            Clicked="{goToDetails}"
             Subtitle="{title}"
             Title="{name}" />
         </Each>

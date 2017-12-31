@@ -1,6 +1,7 @@
 <Panel ux:Class="Measures">
   <float4 ux:Global="Measures.pagePadding" ux:Value="20" />
 
+  <float ux:Global="Measures.smallTextSize" ux:Value="14" />
   <float ux:Global="Measures.largeTitleSize" ux:Value="24" />
   <float ux:Global="Measures.titleSize" ux:Value="20" />
 

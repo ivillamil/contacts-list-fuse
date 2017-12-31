@@ -56,4 +56,4 @@ Polyfills.Window:js/EventTarget.js:eventtarget-c2230a48.js:js/fetch.js:fetch-bb9
 FuseJS
 Outracks.Simulator.Common.Uno
 Fuse.Preview.Core:fight.png:fight-1537455b.png
-ContactsList
+ContactsList:pages/ContactsListPage.js:contactslistpage-5991cdfa.js:pages/ContactDetailsPage.js:contactdetailspage-b0ee3ab5.js:modules/Backend.js:backend-47c2f695.js:modules/Store.js:store-08de9f86.js

@@ -4,6 +4,7 @@
   <ClientPanel Color="{Resource Colors.purpleDark}">
     <Navigator DefaultPath="list">
       <ContactsListPage ux:Template="list" router="router" />
+      <ContactDetailsPage ux:Template="details" router="router" />
     </Navigator>
   </ClientPanel>
 </App>

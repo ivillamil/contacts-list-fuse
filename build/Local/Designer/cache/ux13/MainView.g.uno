@@ -1,6 +1,48 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("list", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::ContactsListPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "list";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template1(MainView parent, MainView parentInstance): base("details", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template1()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::ContactDetailsPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "details";
+    }
     global::Uno.UX.Property<float4> temp_Color_inst;
     internal global::Fuse.Navigation.Router router;
     static MainView()
@@ -112,15 +154,19 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Height, "Height");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColorpurple, "AppColor.purple");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColorpurpleDark, "AppColor.purpleDark");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColorpurpleDarker, "AppColor.purpleDarker");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColorpurpleLight, "AppColor.purpleLight");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColorpurpleLighter, "AppColor.purpleLighter");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColortext, "AppColor.text");
-        global::Uno.UX.Resource.SetGlobalKey(global::Colors.AppColortextLight, "AppColor.textLight");
-        global::Uno.UX.Resource.SetGlobalKey(global::Measures.AppheaderHeight, "App.headerHeight");
-        global::Uno.UX.Resource.SetGlobalKey(global::Measures.ApppagePadding, "App.pagePadding");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.Colorspurple, "Colors.purple");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleDark, "Colors.purpleDark");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleDarker, "Colors.purpleDarker");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleLight, "Colors.purpleLight");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleLighter, "Colors.purpleLighter");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.Colorstext, "Colors.text");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorstextLight, "Colors.textLight");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasurespagePadding, "Measures.pagePadding");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasuressmallTextSize, "Measures.smallTextSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasureslargeTitleSize, "Measures.largeTitleSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasurestitleSize, "Measures.titleSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasuresheaderHeight, "Measures.headerHeight");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasuresitemHeight, "Measures.itemHeight");
     }
     [global::Uno.UX.UXConstructor]
     public MainView()
@@ -148,17 +194,18 @@ public partial class MainView: Fuse.App
         var temp17 = new global::FuseJS.UserEvents();
         var temp = new global::Fuse.Controls.ClientPanel();
         temp_Color_inst = new ContactsList_FuseControlsPanel_Color_Property(temp, __selector0);
-        var temp18 = new global::Fuse.Reactive.Resource("AppColor.purpleDark");
+        var temp18 = new global::Fuse.Reactive.Resource("Colors.purpleDark");
         router = new global::Fuse.Navigation.Router();
-        var temp19 = new global::Fuse.Controls.DockPanel();
-        var temp20 = new global::Header();
-        var temp21 = new global::Fuse.Reactive.DataBinding(temp_Color_inst, temp18, Fuse.Reactive.BindingMode.Default);
+        var temp19 = new global::Fuse.Controls.Navigator();
+        var list = new Template(this, this);
+        var details = new Template1(this, this);
+        var temp20 = new global::Fuse.Reactive.DataBinding(temp_Color_inst, temp18, Fuse.Reactive.BindingMode.Default);
         router.Name = __selector1;
         temp.Children.Add(temp19);
-        temp.Bindings.Add(temp21);
-        temp19.Children.Add(temp20);
-        global::Fuse.Controls.DockPanel.SetDock(temp20, Fuse.Layouts.Dock.Top);
-        temp20.Title = "Contacts";
+        temp.Bindings.Add(temp20);
+        temp19.DefaultPath = "list";
+        temp19.Templates.Add(list);
+        temp19.Templates.Add(details);
         this.Children.Add(router);
         this.Children.Add(temp);
     }

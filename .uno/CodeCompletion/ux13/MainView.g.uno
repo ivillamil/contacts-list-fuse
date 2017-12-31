@@ -1,6 +1,50 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("list", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::ContactsListPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "list";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template1(MainView parent, MainView parentInstance): base("details", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template1()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::ContactDetailsPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "details";
+    }
+    global::Uno.UX.Property<float4> temp_Color_inst;
+    internal global::Fuse.Navigation.Router router;
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.Linear, "Linear");
@@ -110,6 +154,19 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.Colorspurple, "Colors.purple");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleDark, "Colors.purpleDark");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleDarker, "Colors.purpleDarker");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleLight, "Colors.purpleLight");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorspurpleLighter, "Colors.purpleLighter");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.Colorstext, "Colors.text");
+        global::Uno.UX.Resource.SetGlobalKey(global::Colors.ColorstextLight, "Colors.textLight");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasurespagePadding, "Measures.pagePadding");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasuressmallTextSize, "Measures.smallTextSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasureslargeTitleSize, "Measures.largeTitleSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasurestitleSize, "Measures.titleSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasuresheaderHeight, "Measures.headerHeight");
+        global::Uno.UX.Resource.SetGlobalKey(global::Measures.MeasuresitemHeight, "Measures.itemHeight");
     }
     [global::Uno.UX.UXConstructor]
     public MainView()
@@ -118,22 +175,40 @@ public partial class MainView: Fuse.App
     }
     void InitializeUX()
     {
-        var temp = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
-        var temp1 = new global::Fuse.Reactive.FuseJS.Http();
-        var temp2 = new global::Fuse.Reactive.FuseJS.TimerModule();
-        var temp3 = new global::Fuse.Drawing.BrushConverter();
-        var temp4 = new global::Fuse.Triggers.BusyTaskModule();
-        var temp5 = new global::Fuse.Testing.UnoTestingHelper();
-        var temp6 = new global::Fuse.FileSystem.FileSystemModule();
-        var temp7 = new global::Fuse.Storage.StorageModule();
-        var temp8 = new global::Fuse.WebSocket.WebSocketClientModule();
-        var temp9 = new global::Polyfills.Window.WindowModule();
-        var temp10 = new global::FuseJS.Globals();
-        var temp11 = new global::FuseJS.Lifecycle();
-        var temp12 = new global::FuseJS.Environment();
-        var temp13 = new global::FuseJS.Base64();
-        var temp14 = new global::FuseJS.Bundle();
-        var temp15 = new global::FuseJS.FileReaderImpl();
-        var temp16 = new global::FuseJS.UserEvents();
+        var temp1 = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp2 = new global::Fuse.Reactive.FuseJS.Http();
+        var temp3 = new global::Fuse.Reactive.FuseJS.TimerModule();
+        var temp4 = new global::Fuse.Drawing.BrushConverter();
+        var temp5 = new global::Fuse.Triggers.BusyTaskModule();
+        var temp6 = new global::Fuse.Testing.UnoTestingHelper();
+        var temp7 = new global::Fuse.FileSystem.FileSystemModule();
+        var temp8 = new global::Fuse.Storage.StorageModule();
+        var temp9 = new global::Fuse.WebSocket.WebSocketClientModule();
+        var temp10 = new global::Polyfills.Window.WindowModule();
+        var temp11 = new global::FuseJS.Globals();
+        var temp12 = new global::FuseJS.Lifecycle();
+        var temp13 = new global::FuseJS.Environment();
+        var temp14 = new global::FuseJS.Base64();
+        var temp15 = new global::FuseJS.Bundle();
+        var temp16 = new global::FuseJS.FileReaderImpl();
+        var temp17 = new global::FuseJS.UserEvents();
+        var temp = new global::Fuse.Controls.ClientPanel();
+        temp_Color_inst = new ContactsList_FuseControlsPanel_Color_Property(temp, __selector0);
+        var temp18 = new global::Fuse.Reactive.Resource("Colors.purpleDark");
+        router = new global::Fuse.Navigation.Router();
+        var temp19 = new global::Fuse.Controls.Navigator();
+        var list = new Template(this, this);
+        var details = new Template1(this, this);
+        var temp20 = new global::Fuse.Reactive.DataBinding(temp_Color_inst, temp18, Fuse.Reactive.BindingMode.Default);
+        router.Name = __selector1;
+        temp.Children.Add(temp19);
+        temp.Bindings.Add(temp20);
+        temp19.DefaultPath = "list";
+        temp19.Templates.Add(list);
+        temp19.Templates.Add(details);
+        this.Children.Add(router);
+        this.Children.Add(temp);
     }
+    static global::Uno.UX.Selector __selector0 = "Color";
+    static global::Uno.UX.Selector __selector1 = "router";
 }
