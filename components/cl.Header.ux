@@ -12,6 +12,7 @@
   <Match Value="{ReadProperty LeftButton}">
     <Case Bool="true">
       <cl.Icon 
+        Color="{Resource Colors.purpleDark}"
         Clicked="{ReadProperty LeftButtonCallback}"
         Icon="{ReadProperty LeftButtonIcon}"
         Margin="-20,0,0,0"
