@@ -1,4 +1,5 @@
 <App>
+  <Font File="assets/material.ttf" ux:Global="Material" />
   <Router ux:Name="router" />
 
   <ClientPanel Color="{Resource Colors.purpleDark}">

@@ -1,0 +1,15 @@
+<Panel ux:Class="cl.Icon">
+  <string ux:Property="Icon" />
+
+  <Text ux:Class="Icon" 
+    Alignment="Center"
+    Color="{Resource Colors.text}"
+    Font="Material" 
+    FontSize="20" />
+
+
+  <Match Value="{ReadProperty Icon}">
+    <Case String="arrow_back"><Icon Value="&#xe5c4;" /></Case>
+    <Case String="schedule"><Icon Value="&#xe8b5;" /></Case>
+  </Match>
+</Panel>

@@ -38,6 +38,26 @@ sealed class ContactsList_accessor_cl_Header_Title: global::Uno.UX.PropertyAcces
     public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((cl.Header)obj).SetTitle((string)v, origin); }
     public override bool SupportsOriginSetter { get { return true; } }
 }
+sealed class ContactsList_accessor_cl_TextField_Label: global::Uno.UX.PropertyAccessor
+{
+    public static global::Uno.UX.PropertyAccessor Singleton = new ContactsList_accessor_cl_TextField_Label();
+    public override global::Uno.UX.Selector Name { get { return _name; } }
+    static global::Uno.UX.Selector _name = "Label";
+    public override global::Uno.Type PropertyType { get { return typeof(string); } }
+    public override object GetAsObject(global::Uno.UX.PropertyObject obj) { return ((cl.TextField)obj).Label; }
+    public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((cl.TextField)obj).SetLabel((string)v, origin); }
+    public override bool SupportsOriginSetter { get { return true; } }
+}
+sealed class ContactsList_accessor_cl_TextField_Text: global::Uno.UX.PropertyAccessor
+{
+    public static global::Uno.UX.PropertyAccessor Singleton = new ContactsList_accessor_cl_TextField_Text();
+    public override global::Uno.UX.Selector Name { get { return _name; } }
+    static global::Uno.UX.Selector _name = "Text";
+    public override global::Uno.Type PropertyType { get { return typeof(string); } }
+    public override object GetAsObject(global::Uno.UX.PropertyObject obj) { return ((cl.TextField)obj).Text; }
+    public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((cl.TextField)obj).SetText((string)v, origin); }
+    public override bool SupportsOriginSetter { get { return true; } }
+}
 sealed class ContactsList_FuseControlsPanel_Color_Property: Uno.UX.Property<float4>
 {
     [Uno.WeakReference] readonly Fuse.Controls.Panel _obj;
@@ -122,6 +142,32 @@ sealed class ContactsList_FuseAnimationsChangefloat4_Value_Property: Uno.UX.Prop
     public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
     public override float4 Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Animations.Change<float4>)obj).Value; }
     public override void Set(global::Uno.UX.PropertyObject obj, float4 v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Animations.Change<float4>)obj).Value = v; }
+}
+sealed class ContactsList_FuseElementsElement_Margin_Property: Uno.UX.Property<float4>
+{
+    [Uno.WeakReference] readonly Fuse.Elements.Element _obj;
+    public ContactsList_FuseElementsElement_Margin_Property(Fuse.Elements.Element obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override float4 Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Elements.Element)obj).Margin; }
+    public override void Set(global::Uno.UX.PropertyObject obj, float4 v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Elements.Element)obj).Margin = v; }
+}
+sealed class ContactsList_FuseControlsRectangle_CornerRadius_Property: Uno.UX.Property<float4>
+{
+    [Uno.WeakReference] readonly Fuse.Controls.Rectangle _obj;
+    public ContactsList_FuseControlsRectangle_CornerRadius_Property(Fuse.Controls.Rectangle obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override float4 Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Controls.Rectangle)obj).CornerRadius; }
+    public override void Set(global::Uno.UX.PropertyObject obj, float4 v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Controls.Rectangle)obj).SetCornerRadius(v, origin); }
+    public override bool SupportsOriginSetter { get { return true; } }
+}
+sealed class ContactsList_clTextField_Text_Property: Uno.UX.Property<string>
+{
+    [Uno.WeakReference] readonly cl.TextField _obj;
+    public ContactsList_clTextField_Text_Property(cl.TextField obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override string Get(global::Uno.UX.PropertyObject obj) { return ((cl.TextField)obj).Text; }
+    public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((cl.TextField)obj).SetText(v, origin); }
+    public override bool SupportsOriginSetter { get { return true; } }
 }
 sealed class ContactsList_FuseReactiveEach_Items_Property: Uno.UX.Property<object>
 {

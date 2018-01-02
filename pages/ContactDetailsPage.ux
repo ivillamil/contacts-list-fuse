@@ -2,7 +2,12 @@
   <Router ux:Dependency="router" />
   <JavaScript File="ContactDetailsPage.js" />
   <DockPanel>
-    <cl.Header Dock="Top" Title="" />
+    <cl.Header 
+      Dock="Top" 
+      LeftButton="true"
+      LeftButtonCallback="{goBack}"
+      LeftButtonIcon="arrow_back"
+      Title="" />
     <ScrollView>
       <StackPanel>
         <Circle Height="120" Width="120">

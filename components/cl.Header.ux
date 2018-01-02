@@ -4,7 +4,20 @@
   Height="{Resource Measures.headerHeight}"
   Orientation="Horizontal"
   Padding="{Resource Measures.pagePadding},0">
+  <bool ux:Property="LeftButton" />
+  <object ux:Property="LeftButtonCallback" />
+  <string ux:Property="LeftButtonIcon" />
   <string ux:Property="Title" />
+
+  <Match Value="{ReadProperty LeftButton}">
+    <Case Bool="true">
+      <cl.Icon 
+        Clicked="{ReadProperty LeftButtonCallback}"
+        Icon="{ReadProperty LeftButtonIcon}"
+        Margin="-20,0,0,0"
+        Width="48" />
+    </Case>
+  </Match>
 
   <Text 
     Alignment="Center"

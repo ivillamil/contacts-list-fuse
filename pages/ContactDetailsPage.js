@@ -10,6 +10,12 @@ const contact = this.Parameter.map(function (obj) {
   }
 })
 
+function goBack() {
+  router.goBack()
+}
+
 module.exports = {
-  contact
+  contact,
+
+  goBack
 }
